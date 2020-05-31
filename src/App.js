@@ -1,16 +1,13 @@
-import React,{Component} from 'react';
-import './App.css';
-import Parent from './component/parent'
+import React, { Component } from 'react';
+import './App.css'
+import Pexplorer from "./components/01pexplorer/Pexplorer"
 class App extends Component {
-  componentDidMount(){}
-  render(){
+  render() {
     return (
-      <div className="App">
-      <Parent></Parent>
-      </div>
+        <div className="App">
+        <Pexplorer></Pexplorer>
+        </div>
     );
   }
-  
 }
-
 export default App;

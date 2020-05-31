@@ -1,0 +1,157 @@
+.pexplorer{
+    background-color: #e3e9e6;
+    
+}
+/* Three continers starts here */
+.navbar-brand{
+    font-family: Impact, Charcoal, sans-serif;
+    color: rgb(9, 56, 9) !important;
+    font-weight: 500 !important;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(230, 230, 230) !important; 
+    }
+    .nav-link{
+      padding: 0px 10px !important;
+    }
+    .navbar{
+      padding: 0rem 1rem !important;
+    }
+    .mynav{
+      z-index: 10;
+      box-shadow: 0px 1px 25px 3px rgba(217, 230, 221, 0.97);
+      position: sticky;
+      margin-left: 0px !important;
+      margin-top: 0px !important;
+      top:0;
+      left: 0;
+      position: -webkit-sticky;
+      position: fixed;
+      display: flex; align-items: center !important;justify-content: center !important;
+      width: 100%;
+    }
+    .navbar{
+      background-color: rgb(201, 221, 207) !important;
+    }
+    .navbar-collapse{
+      background-color: rgb(201, 221, 207) !important;
+    }
+    .dropdown-menu{
+      background-color: rgba(217, 230, 221, 0.97) !important;
+    }
+.char_list_container{
+    margin-top: 60px;
+    margin-bottom: 0px;
+    background-color: #e3e9e6;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px 10px;
+    margin-left: 0px !important;
+    border-left:2px solid rgb(85, 123, 128,.8);
+}
+.char_list_container div{
+    padding:0px 6px;
+    margin:8px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 1px 4px 4px 1px rgba(145, 142, 142, 0.7);
+    border-radius: 5px;
+    background-color:rgba(238, 238, 238, 0.4);
+    color: rgb(0, 0, 0);
+    height: 40px;
+}
+.char_list_container p{
+    height: 30;
+    margin:auto 0px;
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(25, 0, 94);
+    font-size: 12px;
+    
+}
+.char_list_container div:hover{
+    background-color:rgb(201, 221, 207);
+}
+/* Container to contain tree and chart */
+.tree_and_linechart{
+    overflow-x: scroll;
+    background-color:#e3e9e6;
+    margin-top: 0px;
+    padding: 0px;
+    margin-left:0px !important;
+    border:2px solid rgb(85, 123, 128,.8);
+}
+
+/* Three continers ends here */
+.menu{
+    height: 36px;
+    margin: 8px 0px;
+    margin-left: 15px;
+    margin-right: 20px;
+  
+  }
+  .pmynav p{
+    margin: 8px 1px;
+    padding: 7px 8px;
+    display: inline-block;
+    text-align: center; 
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 19px rgb(247, 247, 247); 
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+.pmynav div{
+    display: inline-block;
+    width: 1px;
+    height: 22px;
+    margin-top: 15px;
+    background-color: rgb(158, 154, 154,.3);
+}
+.treemap{
+    padding: 0px !important;
+    background-color:#e3e9e6;
+    /* border-right: 1px solid rgb(54, 5, 5,.05);*/
+}
+.linechart{
+    background-color:#e3e9e6;
+    
+}
+#tree_root{
+    text-align: center;   
+}
+#svg_container{
+    text-align: center;
+}
+.p_and_slider_container{
+    margin:10% 0px;
+    display: inline-block;
+}
+.clicked{
+    background-color:rgba(229, 235, 144, 0.8) !important;
+}
+.modebar{
+    display: none;
+}
+#chartcontainer{
+display: flex; align-items: center; justify-content: center;  
+padding: 0px !important;
+}
+.main-svg{
+    background: transparent !important;
+    margin-top: 0px;
+    margin-left: 0px !important;
+}
+.mychart{
+    border:1px solid rgb(128, 128, 128,.2);
+    overflow-x: scroll;
+    margin: 0px !important;
+}
+.tree_container{
+    border:1px solid rgb(128, 128, 128,.2);
+    overflow-x: scroll;
+    display: flex; align-items: center; justify-content: center;
+}
+

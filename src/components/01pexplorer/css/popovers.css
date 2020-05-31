@@ -1,0 +1,19 @@
+.myp{
+    background-color: red;
+    display: inline-block;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 200px;
+    margin-left: 20px;
+}
+.popover{
+    background-color: rgba(225, 231, 236, 0.9) !important;
+}
+span.arrow::after{
+    display: none;
+}
+.mypopover_container{
+    background-color: rgb(229, 255, 0);
+    height: 500px;
+}

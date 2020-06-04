@@ -21,28 +21,22 @@ createTree(mytreedata,mywidth,myheight){
       }
       console.log(treeData[0].children[i].percentage,highest_value)
   }
-  //console.log(highest_value)
+//console.log(highest_value)
 //------------------------- Initial set ups
 var margin = {top: 40, right: mywidth*.01, bottom: 0, left: mywidth*.01},
 width = mywidth - margin.right - margin.left,
 height = 350 - margin.top - margin.bottom;
-var rectConfig={width:500,height:30}
+var rectConfig={width:500,height:30,x:100,y:25}
 //-----
 var svg = d3.select(this.node).append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom).attr("id","svg_container")
+svg.append('rect').attr("width",rectConfig.width).attr('height',rectConfig.height).attr('x',rectConfig.x).attr('y',rectConfig.y).attr('fill','#8aa9c5')
+
 var groups=svg.selectAll('g').append('g').data([0,1,2,3])
 groups.exit().remove()
-var groupsEnter=groups.enter().append("g").attr('transform',(d,i)=>'translate(' + 0 + ',' + 0 + ')')
+var groupsEnter=groups.enter().append("g").attr('transform',(d,i)=>'translate(' + (i*(rectConfig.width/4)+145) + ',' + rectConfig.y + ')')
 groups.merge(groupsEnter)
-var text=groupsEnter.append('text').text("hello").attr('y',(d,i)=>height-80).attr('x',(d,i)=>i*(rectConfig.width/4)+130)
-var line= groupsEnter.append('line')
-     .attr('x1',(d,i)=>i*(rectConfig.width/4)+145)
-     .attr('y1', 30)
-     .attr('x2',(d,i)=>i*(rectConfig.width/4)+145)
-     .attr('y2', height-100)
-     .attr("stroke-width",5)
-     .style('stroke', 'red');
-
-svg.append('rect').attr("width",rectConfig.width).attr('height',30).attr('x',100).attr('y',25).attr('fill','green')
+var text=groupsEnter.append('text').text("hello").attr('y',(d,i)=>height-80)
+var line= groupsEnter.append('line').attr('y1', 30).attr('y2', height-100).attr("stroke-width",5).style('stroke', '#989994');
 }
 
 

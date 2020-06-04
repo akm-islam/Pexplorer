@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.5.1",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
-    "d3": "^3.5.17",
+    "d3": "^4.2.2",
     "jquery": "^3.4.1",
     "nw-react-slider": "^2.0.1",
     "plotly.js": "^1.52.2",

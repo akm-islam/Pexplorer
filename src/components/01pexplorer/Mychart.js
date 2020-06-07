@@ -7,18 +7,18 @@ class Mychart extends Component {
         this.target="id1";
       }
 componentDidMount(){
-  console.log(this.props.mywidth)
+  
 }
 componentDidUpdate(){
-  console.log(Object.keys(this.props.data))  
+  
 }
 shouldComponentUpdate(nextProps, nextState){
-  console.log(Object.keys(this.props.data))  
+  
     if(this.props.data===nextProps.data){
-      console.log("True")
+      
       return true}
     else{
-      console.log("False")
+      
       return true}
 }
 render(){

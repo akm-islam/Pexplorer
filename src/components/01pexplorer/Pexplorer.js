@@ -41,7 +41,7 @@ pclick_handler=(e,d,def_value)=>{
     this.classAdder(d,"clicked")  
   }
   //------
-  this.setState({dict_of_charactersitics:temp_dict},()=>console.log(this.state.dict_of_charactersitics))
+  this.setState({dict_of_charactersitics:temp_dict})
   //-------
   this.setState({clicked_characteristics:clicked_characteristics},()=>{
     var tree_vis=<Tree data={myData} clicked_characteristics={this.state.clicked_characteristics}> </Tree>
@@ -52,8 +52,7 @@ pclick_handler=(e,d,def_value)=>{
 handleonChangeCommitted = (e,new_value,d) => {
   var temp_dict=this.state.dict_of_charactersitics;
   temp_dict[d]=new_value;
-  this.setState({dict_of_charactersitics:temp_dict},()=>console.log(this.state.dict_of_charactersitics))
-  console.log(new_value,d)
+  this.setState({dict_of_charactersitics:temp_dict})
 }
 shuffle=(array)=> {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -70,7 +69,6 @@ shuffle=(array)=> {
   return array;
 }
 createview=()=>{
-  console.log(myData)
   var all_chars=this.shuffle(myData.all_chars)
   this.setState({all_chars:all_chars})
 }
@@ -80,7 +78,6 @@ componentDidMount(){
     var x = Math.floor((Math.random() * 80) + 20);
     mydict[myData.all_chars[i]]=x
   }
-  console.log(mydict)
   this.createview()
   }
   toggle = () => {
@@ -97,14 +94,14 @@ render(){
                 return <Row id={d} id={d} style={{height:40}}>
                 <p onClick={(e)=>this.pclick_handler(e,d,def_value)}>{d}</p>
                 {this.state.clicked_characteristics.includes(d)?<Slider valueLabelDisplay="auto" orientation="horizontal" defaultValue={0} 
-                onChangeCommitted={(e,value)=>this.handleonChangeCommitted(e,value,d)}>
+                onChange={(e,value)=>this.handleonChangeCommitted(e,value,d)}>
                 </Slider>:null}
                 </Row>
             }):null}
         </Row>
         <Row className="tree_and_linechart">
           <Col className="treemap" xs="12" sm='12' md='12' lg="6">
-          {this.state.tree_vis!=null?this.state.tree_vis:null}
+          <Tree data={myData} clicked_characteristics={this.state.clicked_characteristics}> </Tree>
           </Col>
           <Col id='chartcontainer' className="linechart" xs="12" sm='12' md='12' lg="6">
             <Mychart data={this.state.dict_of_charactersitics}></Mychart>
